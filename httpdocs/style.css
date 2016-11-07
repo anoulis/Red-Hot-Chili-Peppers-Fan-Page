@@ -1,15 +1,17 @@
 body {
-    background-color: lightblue;
+    background-color: blue;
     background-image: url("images/rhcp-group.photo.jpg");
     background-repeat: no-repeat;
+	margin:0;
 }
 h1 {
     background-color: green;
 }
 
 div {
-    background-color: lightblue;
+    background-color: red;
 }
+
 
 ul {
     list-style-type: none;
@@ -17,6 +19,9 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 li {
@@ -32,11 +37,11 @@ li a {
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: darkorange;
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: darkred;
 }
 
 
@@ -48,10 +53,4 @@ li a:hover:not(.active) {
    width:100%;
    background:#999;
   text-align: center;
-}
-
-/* IE 6 */
-* html #footer {
-   position:absolute;
-   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
 }
