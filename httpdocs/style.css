@@ -1,7 +1,8 @@
 body {
     background-color: blue;
     background-image: url("images/rhcp-group.photo.jpg");
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
+    background-size:cover;
 	margin:0;
 }
 h1 {
