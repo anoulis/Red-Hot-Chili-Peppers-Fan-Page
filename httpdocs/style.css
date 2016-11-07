@@ -1,3 +1,16 @@
+body {
+    background-color: lightblue;
+    background-image: url("images/rhcp-group.photo.jpg");
+    background-repeat: no-repeat;
+}
+h1 {
+    background-color: green;
+}
+
+div {
+    background-color: lightblue;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -24,4 +37,21 @@ li a:hover:not(.active) {
 
 .active {
     background-color: #4CAF50;
+}
+
+
+.footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#999;
+  text-align: center;
+}
+
+/* IE 6 */
+* html #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
 }
