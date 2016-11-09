@@ -1,4 +1,4 @@
-//For index
+/*For index*/
 
 body {
   background-color: black;
@@ -10,7 +10,7 @@ body > img{
   height: auto;
 }
 
-//Biography
+/*Biography*/
 
 .clearfix {
    text-align:center;
@@ -21,7 +21,7 @@ body > img{
    float: right;
 }
 
-//(General)
+/*(General)*/
 section{
    color:white;
    padding: 10px;
@@ -37,7 +37,7 @@ h3{
    color:white;
 }
 
-//General
+/*General*/
 ul {
    list-style-type: none;
    margin: 0;
@@ -86,4 +86,3 @@ footer {
    text-align: center; 
    line-height: 3em;
 }
-
