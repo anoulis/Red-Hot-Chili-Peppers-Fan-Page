@@ -1,15 +1,13 @@
 body {
-    background-color: black;
-    background-repeat:no-repeat;
-	background-size:cover;
-	margin:0;
-	
+ background-color: black;
+ background-repeat:no-repeat;
+ background-size:cover;
+ margin:0;
+ 
 }
-a {
+a{
     color: red;
 }
-
-body.biography-bg{background-image:url("images/b-img.jpg");}
 
 ul {
     list-style-type: none;
@@ -43,15 +41,35 @@ li a:hover:not(.active) {
     background-color: darkred;
 }
 
-h2{
-text-align:center;
-color:white;
+.clearfix {
+    overflow: auto;
 }
 
+.img2 {
+    float: right;
+}
 article{
 color:white;
 padding: 10px;
 }
+section{
+color:white;
+padding: 10px;
+}
+h1{
+text-align:center;
+color:white;
+}
+h2{
+text-align:center;
+color:white;
+}
+h3{
+text-align:center;
+color:white;
+}
+
+
 
 footer {
 position:fixed;
