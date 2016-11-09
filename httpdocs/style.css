@@ -1,7 +1,12 @@
 body {
     background-color: black;
     background-repeat:no-repeat;
+	background-size:cover;
 	margin:0;
+	
+}
+a {
+    color: red;
 }
 
 body.biography-bg{background-image:url("images/b-img.jpg");}
@@ -49,8 +54,13 @@ padding: 10px;
 }
 
 footer {
+position:fixed;
+left:0px;
+bottom:0px;
+height:20px;
+width:100%;
+background:#999;
+text-align: center;
 background-color: #333;
- color: white; 
-text-align: center; 
-line-height: 3em;
+color: white; 
 }
