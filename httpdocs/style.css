@@ -5,7 +5,7 @@ body {
   margin:0;
 }
 
-body > img{
+#home_bg{
   width: 100%;
   height: auto;
 }
@@ -28,6 +28,7 @@ section{
 }
 
 h1{
+   padding:10px;
    text-align:center;
    color:white;
 }
@@ -36,40 +37,6 @@ h3{
    text-align:center;
    color:white;
 }
-
-/*General*/
-ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   background-color: #333;
-   position: fixed;
-   top: 0;
-   width: 100%;
-}
-
-li {
-   float: left;
-}
-
-li a {
-   display: block;
-   color: white;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
-}
-
-li a:hover:not(.active) {
-   background-color:darkred;
-   opacity: 0.6;
-}
-
-.active {
-   background-color: darkred;
-}
-
 h2{
    text-align:center;
    color:white;
@@ -85,5 +52,65 @@ footer {
    color: white; 
    text-align: center; 
    line-height: 3em;
-   margin-bottom:0;
+
 }
+
+/*Discography*/
+
+#dis_id {
+   text-align:center;
+   color:white;
+}
+
+ul {
+
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   color:white;
+}
+
+#disc_img {
+   width: 200px;
+   height: 200px;
+   margin:10px;
+}
+
+/*Navigation*/
+
+nav > ul {
+   list-style-type: none;
+   padding:0;
+   margin:0;
+   overflow: hidden;
+   background-color: #333;
+   top: 0;
+   width: 100%;
+}
+
+ul > li > a{
+   float: left;
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+
+ul > li > a:hover:not(.active) {
+   background-color:darkred;
+   opacity: 0.6;
+}
+
+.active {
+   background-color: darkred;
+}
+
+@media screen and (max-width: 600px){
+    ul > li > a{float: none;}
+    body {
+      background-color: black;
+      margin:0;
+}
+}
+
