@@ -45,6 +45,10 @@ p{
    text-align:left;
    color:white;
 }
+p1{
+   text-align:center;
+   color:white;
+}
 
 article{
    color:white;
@@ -102,7 +106,7 @@ ul > li > a{
 }
 
 ul > li > a:hover:not(.active) {
-   background-color:darkred;
+   background-color:red;
    opacity: 0.6;
 }
 
@@ -118,3 +122,74 @@ ul > li > a:hover:not(.active) {
 }
 }
 
+/*News*/
+.groupButtons{
+	text-align:center;
+}
+
+.button {
+    
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+	border-radius: 12px;
+}
+
+
+.button1 {
+    background-color: darkred;
+    color: white;
+}
+
+.button1:hover {
+    background-color: red;
+    color: white;
+}
+
+.button2 {
+    background-color: #585858;
+    color: white;
+}
+
+.button2:hover {
+    background-color: #FF4000;
+    color: white;
+}
+
+.button3 {
+    background-color: #08088A;
+    color: white;
+}
+
+.button3:hover {
+    background-color: #2E64FE;
+    color: white;
+}
+
+.button4 {
+    background-color: #045FB4;
+    color: white;
+}
+
+.button4:hover {
+    background-color: #2ECCFA;
+    color: white;
+}
+
+.button5 {
+    background-color: #B40404;
+    color: white;
+}
+
+.button5:hover {
+    background-color: #FE2E2E;
+    color: white;
+}
