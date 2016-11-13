@@ -1,3 +1,7 @@
+* {
+ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
 /*For index*/
 
 body {
@@ -41,14 +45,6 @@ h2{
    text-align:center;
    color:white;
 }
-p{
-   text-align:left;
-   color:white;
-}
-p1{
-   text-align:center;
-   color:white;
-}
 
 article{
    color:white;
@@ -78,7 +74,7 @@ ul {
    color:white;
 }
 
-#disc_img {
+.disc_img {
    width: 200px;
    height: 200px;
    margin:10px;
@@ -106,7 +102,7 @@ ul > li > a{
 }
 
 ul > li > a:hover:not(.active) {
-   background-color:red;
+   background-color:darkred;
    opacity: 0.6;
 }
 
@@ -123,8 +119,27 @@ ul > li > a:hover:not(.active) {
 }
 
 /*News*/
-.groupButtons{
-	text-align:center;
+
+.news_p{
+    margin-left: 220px
+}
+
+.news{
+   overflow:auto;
+}
+
+.img_news{
+   float:left;
+   width: 200px;
+   height:  auto;
+   margin:10px;
+}
+
+.icons{
+   width:40px;
+   height:auto;
+   float: middle;
+   margin: 10px;
 }
 
 .button {
@@ -140,7 +155,7 @@ ul > li > a:hover:not(.active) {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-	border-radius: 12px;
+    border-radius: 12px;
 }
 
 
@@ -154,42 +169,3 @@ ul > li > a:hover:not(.active) {
     color: white;
 }
 
-.button2 {
-    background-color: #585858;
-    color: white;
-}
-
-.button2:hover {
-    background-color: #FF4000;
-    color: white;
-}
-
-.button3 {
-    background-color: #08088A;
-    color: white;
-}
-
-.button3:hover {
-    background-color: #2E64FE;
-    color: white;
-}
-
-.button4 {
-    background-color: #045FB4;
-    color: white;
-}
-
-.button4:hover {
-    background-color: #2ECCFA;
-    color: white;
-}
-
-.button5 {
-    background-color: #B40404;
-    color: white;
-}
-
-.button5:hover {
-    background-color: #FE2E2E;
-    color: white;
-}
