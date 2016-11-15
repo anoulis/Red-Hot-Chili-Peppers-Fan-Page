@@ -56,7 +56,7 @@ footer {
    color: white; 
    text-align: center; 
    line-height: 3em;
-
+   position:bottom;
 }
 
 /*Discography*/
@@ -90,6 +90,7 @@ nav > ul {
    background-color: #333;
    top: 0;
    width: 100%;
+   position: fixed;
 }
 
 ul > li > a{
@@ -116,6 +117,13 @@ ul > li > a:hover:not(.active) {
       background-color: black;
       margin:0;
 }
+}
+
+#space{
+	padding:20px;
+	margin-top:30px;
+	height:500px;
+	
 }
 
 /*News*/
@@ -168,4 +176,16 @@ ul > li > a:hover:not(.active) {
     background-color: red;
     color: white;
 }
+#social_group{
+	text-align:center;
+}
+
+/*Multimedia*/
+#group_multimedia{
+	text-align:center;
+	color:white;
+}
+
+
+
 
