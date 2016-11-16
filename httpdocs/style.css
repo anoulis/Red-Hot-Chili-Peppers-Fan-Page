@@ -60,6 +60,15 @@ footer {
 }
 
 /*Discography*/
+.r{
+    text-align:right;
+}
+
+.up{
+   opacity:0.7;
+   width: 50;
+   height: 50px;
+}
 
 #dis_id {
    text-align:center;
