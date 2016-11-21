@@ -17,12 +17,31 @@ body {
 /*Biography*/
 
 .clearfix {
-   text-align:center;
+   text-align:left;
    overflow: auto;
 }
 
-.img2 {
-   float: right;
+.current_members h3{
+	text-align: left;
+ }
+ 
+ #about_the_group p{
+	text-align: center;
+ }	 
+ 
+ .member{
+	border: 2px solid red;
+}
+
+.current_members {
+    width: 1270px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.current_members img {
+    margin-right: 15px;
+    float: left;
 }
 
 /*(General)*/
