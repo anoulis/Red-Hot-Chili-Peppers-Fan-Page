@@ -15,17 +15,32 @@ body {
 }
 
 /*Biography*/
+.dimensions_b{
+	width:100%;
+	height:auto;
+	margin:0 auto;
+	
+}
 
 .clearfix {
+	
    text-align:left;
-   overflow: auto;
+   position:left;
+   overflow: auto
+   
 }
 
 .current_members h3{
 	text-align: left;
+	
  }
+.former_members pre{
+	text-align: left;
+	white-space: pre-wrap;
+    word-wrap: break-word;
+}
  
- #about_the_group p{
+#about_the_group p{
 	text-align: left;
  }	 
  
@@ -33,11 +48,6 @@ body {
 	border: 2px solid red;
 }
 
-.current_members {
-    width: 1270px;
-    padding: 20px;
-    overflow: hidden;
-}
 
 .current_members img {
     margin-right: 15px;
