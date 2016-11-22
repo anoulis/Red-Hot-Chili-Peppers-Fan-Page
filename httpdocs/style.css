@@ -93,8 +93,7 @@ ul > li > a:hover:not(.active) {
 .clearfix {
 	
    text-align:left;
-   position:left;
-   overflow: auto
+   overflow: auto;
    
 }
 
