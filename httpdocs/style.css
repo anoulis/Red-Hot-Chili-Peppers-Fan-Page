@@ -112,10 +112,6 @@ ul > li > a:hover:not(.active) {
 	text-align: left;
  }	 
  
-.member{
-	border: 2px solid red;
-}
-
 .current_members img {
     margin-right: 15px;
     float: left;
