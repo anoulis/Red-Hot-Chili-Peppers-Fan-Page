@@ -197,12 +197,13 @@ ul {
    overflow:auto;
    border: 2px solid grey;
    border-radius: 5px;
+   height: auto;
 }
 
 .img_news{
    float:left;
    width: 200px;
-   height:  auto;
+   height: 240px;
    margin:10px;
 }
 
