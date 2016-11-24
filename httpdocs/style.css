@@ -36,11 +36,11 @@ footer {
  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-body, html {
-	background-color: black;
-padding: 0;
-margin: 0;
-text-align: center;
+body{
+   background-color: black;
+   padding: 0;
+   margin: 0;
+    text-align: center;
 }
 
 
@@ -80,6 +80,7 @@ ul > li > a:hover:not(.active) {
       background-color: black;
       margin:0;
    }
+   
    
 }
 
