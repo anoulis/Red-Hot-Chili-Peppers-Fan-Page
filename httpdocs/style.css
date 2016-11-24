@@ -5,15 +5,20 @@ h1{
    color:#e6e6e6;
 }
 
-h3{
-   text-align:center;
-   color:#e6e6e6;
-}
 h2{
    text-align:center;
    color:#e6e6e6;
 }
 
+h3{
+   text-align:center;
+   color:#e6e6e6;
+}
+
+h4{
+   text-align:center;
+   color:#e6e6e6;
+}
 article{
    color:#e6e6e6;
    padding: 10px;
@@ -31,10 +36,13 @@ footer {
  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-body {
-  background-color: black;
-  margin:0;
+body, html {
+	background-color: black;
+padding: 0;
+margin: 0;
+text-align: center;
 }
+
 
 /*Navigation*/
 
@@ -155,19 +163,15 @@ ul {
 	
 	
 }
-.dimensions_m{
+.dimensions_video{
 	width:50%;
+	min-width: 230px;
 	height:auto;
 	margin:0 auto;
 	
 }
-
-.m_icons{
-	width:100%;
-	height:auto;
-}
-
 .container {
+	margin:auto;
   position: relative;
   height: 0;
   overflow: hidden;
@@ -183,15 +187,64 @@ ul {
   border:0;
 }
 
+.dimensions_rest{
+	width:100%;
+	height:auto;
+	margin:0 auto;
+	
+}
+
+.lightbox {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+    color:#e6e6e6;
+    text-decoration:none;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	outline: none;
+	display: block;
+}
+
+
+.m_icons{
+	max-width: 50%;
+    min-width: 200px;
+    height: auto;
+	margin:auto;
+	display: block;
+	float:center;
+	
+}
+
+.m_a{
+   text-align:center;
+   color:#e6e6e6;
+   text-decoration:none;
+   width:auto;
+}
+
+
 /*News*/
 
 .links:link    {color:purple; background-color:transparent; text-decoration:none}
 .links:visited {color:darkred; background-color:transparent; text-decoration:none}
 .links:hover   {color:red; background-color:transparent; text-decoration:underline}
 
-.news_p{
-    margin-left: 220px
-}
+
 
 .news{
    overflow:auto;
