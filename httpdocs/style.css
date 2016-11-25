@@ -40,9 +40,8 @@ body{
    background-color: black;
    padding: 0;
    margin: 0;
-    text-align: center;
+   text-align: center;
 }
-
 
 /*Navigation*/
 
@@ -91,6 +90,12 @@ ul > li > a:hover:not(.active) {
   height: auto;
 }
 
+#index_article{
+   color:#e6e6e6;
+   padding: 10px;
+   text-align:left;
+}
+
 /*Biography*/
 .dimensions_b{
 	width:100%;
@@ -98,7 +103,11 @@ ul > li > a:hover:not(.active) {
 	margin:0 auto;
 	
 }
-
+ 
+#about_the_group p{
+	text-align: left;
+ }	 
+ 
 .clearfix {
 	
    text-align:left;
@@ -106,24 +115,25 @@ ul > li > a:hover:not(.active) {
    
 }
 
+.current_members img {
+    margin-right: 15px;
+    float: left;
+}
+
 .current_members h3{
 	text-align: left;
 	
  }
- 
-.former_members pre{
-	text-align: left;
-	white-space: pre-wrap;
-    word-wrap: break-word;
+ul.fm{
+	list-style-type:disc;
+    margin-left:10px;
+	color:#e6e6e6;
 }
- 
-#about_the_group p{
+.former_members{
+	width:100%;
+	height:auto;
 	text-align: left;
- }	 
- 
-.current_members img {
-    margin-right: 15px;
-    float: left;
+	
 }
 
 /*Discography*/
@@ -172,20 +182,20 @@ ul {
 	
 }
 .container {
-	margin:auto;
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  padding-bottom: 56.25%;
+    margin:auto;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
 }
  
 .container iframe {
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border:0;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border:0;
 }
 
 .dimensions_rest{
@@ -227,8 +237,6 @@ ul {
     height: auto;
 	margin:auto;
 	display: block;
-	float:center;
-	
 }
 
 .m_a{
@@ -238,14 +246,11 @@ ul {
    width:auto;
 }
 
-
 /*News*/
 
 .links:link    {color:purple; background-color:transparent; text-decoration:none}
 .links:visited {color:darkred; background-color:transparent; text-decoration:none}
 .links:hover   {color:red; background-color:transparent; text-decoration:underline}
-
-
 
 .news{
    overflow:auto;
