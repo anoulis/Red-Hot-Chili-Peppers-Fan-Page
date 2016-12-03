@@ -98,18 +98,18 @@ ul > li > a:hover:not(.active) {
 
 /*Biography*/
 .dimensions_b{
-	width:100%;
-	height:auto;
-	margin:0 auto;
-	
+  width:100%;
+  height:auto;
+  margin:0 auto;
+  
 }
  
 #about_the_group p{
-	text-align: left;
- }	 
+  text-align: left;
+ }   
  
 .clearfix {
-	
+  
    text-align:left;
    overflow: auto;
    
@@ -121,19 +121,19 @@ ul > li > a:hover:not(.active) {
 }
 
 .current_members h3{
-	text-align: left;
-	
+  text-align: left;
+  
  }
 ul.fm{
-	list-style-type:disc;
+  list-style-type:disc;
     margin-left:10px;
-	color:#e6e6e6;
+  color:#e6e6e6;
 }
 .former_members{
-	width:100%;
-	height:auto;
-	text-align: left;
-	
+  width:100%;
+  height:auto;
+  text-align: left;
+  
 }
 
 /*Discography*/
@@ -157,6 +157,7 @@ ul {
    margin: 0;
    padding: 0;
    color:white;
+  
 }
 
 .disc_img {
@@ -168,18 +169,18 @@ ul {
 
 /*Multimedia*/
 .group_multimedia{
-	text-align:center;
-	position:center;
-	color:white;
-	
-	
+  text-align:center;
+  position:center;
+  color:white;
+  
+  
 }
 .dimensions_video{
-	width:50%;
-	min-width: 230px;
-	height:auto;
-	margin:0 auto;
-	
+  width:50%;
+  min-width: 230px;
+  height:auto;
+  margin:0 auto;
+  
 }
 .container {
     margin:auto;
@@ -199,44 +200,44 @@ ul {
 }
 
 .dimensions_rest{
-	width:100%;
-	height:auto;
-	margin:0 auto;
-	
+  width:100%;
+  height:auto;
+  margin:0 auto;
+  
 }
 
 .lightbox {
-	display: none;
-	position: fixed;
-	z-index: 999;
-	width: 100%;
-	height: 100%;
-	text-align: center;
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
     color:#e6e6e6;
     text-decoration:none;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
 }
 
 .lightbox img {
-	max-width: 90%;
-	max-height: 80%;
-	margin-top: 2%;
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 2%;
 }
 
 .lightbox:target {
-	outline: none;
-	display: block;
+  outline: none;
+  display: block;
 }
 
 
 .m_icons{
-	max-width: 50%;
+  max-width: 50%;
     min-width: 200px;
     height: auto;
-	margin:auto;
-	display: block;
+  margin:auto;
+  display: block;
 }
 
 .m_a{
@@ -308,4 +309,71 @@ ul {
 .button1:hover {
     background-color: red;
     color: white;
+}
+
+/*Quiz*/
+
+#title {
+    text-decoration: underline;
+}
+
+#quiz {
+    text-indent: 10px;
+    display:none;
+}
+
+#container_quiz {
+    width:50%;
+    margin:auto;
+    padding: 0 25px 40px 10px;
+    background-color: darkred;
+    border:4px solid #B0E0E6;
+    border-radius:5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align:left;
+}
+
+
+.button2 {
+    border:4px solid;
+    border-radius:5px;
+    width: 40px;
+    padding-left:5px;
+    padding-right: 5px;
+    position: relative;
+    float:right;
+    background-color: #DCDCDC;
+    color: black;
+    margin: 0 2px 0 2px;
+}
+
+.button2.active {
+    background-color: #F8F8FF;
+    color: #525252;
+}
+
+button2 {
+    position: relative;
+    float:right;
+}
+.button2:hover {
+    background-color: black;
+    color: white;
+  
+}
+
+.button2 a {
+    text-decoration: none;
+    color: darkred;
+}
+
+#prev {
+    display:none;
+    text-align:left;
+}
+
+#start {
+    display:none;
+    width: 90px;
 }
