@@ -7,37 +7,18 @@ div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }
 </style>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script>
-var pos = 0, find = 0, flag=0, movement=false, test, test_status, question, choice, choices, chA, chB, chC,cch, correct = 0;
 
-   var questions = [{
-    question: "1) What is 2*5?",
-    choices: [3, 5, 10],
-    correctAnswer: 2
-  }, {
-    question: "2) What is 3*6?",
-    choices: [3, 6, 18],
-    correctAnswer: 2
-  }, {
-    question: "3) What is 8*9?",
-    choices: [72, 99, 108],
-    correctAnswer: 0
-  }, {
-    question: "4) What is 1*7?",
-    choices: [4, 7, 6],
-    correctAnswer: 1
-  }, {
-    question: "5) What is 8*8?",
-    choices: [20, 30, 64],
-    correctAnswer: 2
-  }, {
-    question: "6) What is 2*7?",
-    choices: [14, 7, 6],
-    correctAnswer: 1
-  }, {
-    question: "7) What is 4*8?",
-    choices: [20, 32, 64],
-    correctAnswer: 1
-  }];
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      showQuestion(this);
+    }
+  };
+  xhttp.open("GET", "quizData.xml", true);
+  xhttp.send();
+}
+var pos = 0, find = 0, flag=0, movement=false, test, test_status, question, choice, choices, chA, chB, chC,cch, correct = 0;
 
 var positions = [];
 
@@ -45,7 +26,7 @@ function randomize(){
 	var k = 0;
 	 while (k < 5) {
          var randomnumber = Math.floor((Math.random() * 6) + 0);
-          if (positions.indexOf(randomnumber) == -1) { 
+          if (positions.indexOf(randomnumber) == -1) {
               positions[k] = randomnumber;
               k++;
           }
@@ -68,7 +49,7 @@ function start(){
 function play(){
 	if(pos<size){
 		index = positions[pos];
-		showQuestion();
+    loadDoc();
 	}else{
 		printResults();
 		randomize();
@@ -84,15 +65,19 @@ function printResults(){
 		correct = 0;
 }
 
-function showQuestion(){
-	_("test_status").innerHTML = "Question "+(pos+1)+" of "+size;
-	question = questions[index].question;
-	chA = questions[index].choices[0];
-	chB = questions[index].choices[1];
-	chC = questions[index].choices[2];
-	cch = questions[index].correctAnswer;
+function showQuestion(xml){
+    var xmlDoc = xml.responseXML;
+    var i;
+    var x = xmlDoc.getElementsByTagName("QUESTION");
+    i=index;
+  _("test_status").innerHTML = "Question "+(pos+1)+" of "+size;
+  question = x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+	chA = x[i].getElementsByTagName("CHOICE_ONE")[0].childNodes[0].nodeValue;
+	chB = x[i].getElementsByTagName("CHOICE_TWO")[0].childNodes[0].nodeValue;
+	chC = x[i].getElementsByTagName("CHOICE_THREE")[0].childNodes[0].nodeValue;
+	cch = x[i].getElementsByTagName("ANSWER")[0].childNodes[0].nodeValue;
 	test.innerHTML = "<h3>"+question+"</h3>";
-	test.innerHTML += "<input type='image' onclick='markQuestion(chA)' src='images/test2.png' width='100' height='100' name='choices' id='A' > "+chA+"<br> ";
+	test.innerHTML += "<input type='image' onclick='markQuestion(chA)' src='images/test2.png' width='100' height='100' name='choices' id='A'> "+chA+"<br> ";
 	test.innerHTML += "<input type='image' onclick='markQuestion(chB)' src='images/test2.png' width='100' height='100' name='choices' id='B'> "+chB+"<br>";
 	test.innerHTML += "<input type='image' onclick='markQuestion(chC)' src='images/test2.png' width='100' height='100' name='choices' id='C'> "+chC+"<br><br>";
 	test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
@@ -102,7 +87,8 @@ function showQuestion(){
 function markQuestion(element){
 	find=1;
 	choice =element;
-	if(choice == questions[index].choices[cch]){
+  var corAns = x[i].getElementsByTagName("ANSWER")[0].childNodes[0].nodeValue;
+	if(choice == corAns){
 		 flag=1;
 		correct++;
 	}
