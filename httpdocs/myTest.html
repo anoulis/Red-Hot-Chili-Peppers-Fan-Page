@@ -3,7 +3,353 @@
 <head>
 <meta charset="UTF-8">
 <style>
-div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }
+
+/*(General)*/
+h1{
+   padding:10px;
+   text-align:center;
+   color:#e6e6e6;
+}
+
+h2{
+   text-align:center;
+   color:#e6e6e6;
+}
+
+h3{
+   text-align:center;
+   color:#e6e6e6;
+}
+
+h4{
+   text-align:center;
+   color:#e6e6e6;
+}
+article{
+   color:#e6e6e6;
+   padding: 10px;
+}
+
+footer {
+   background-color: #333;
+   color: #e6e6e6;
+   text-align: center;
+   line-height: 3em;
+
+}
+
+* {
+ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+body{
+   background-color: black;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+
+/*Navigation*/
+
+nav > ul {
+   list-style-type: none;
+   padding:0;
+   margin:0;
+   overflow: hidden;
+   background-color: #333;
+   top: 0;
+   width: 100%;
+}
+
+ul > li > a{
+   float: left;
+   display: block;
+   color: #e6e6e6;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+
+ul > li > a:hover:not(.active) {
+   background-color:darkred;
+   opacity: 0.6;
+}
+
+.active {
+   background-color: darkred;
+}
+
+@media screen and (max-width: 600px){
+    ul > li > a{float: none;}
+    body {
+      background-color: black;
+      margin:0;
+   }
+
+
+}
+
+/*For index*/
+
+#home_bg{
+  width: 100%;
+  height: auto;
+}
+
+#index_article{
+   color:#e6e6e6;
+   padding: 10px;
+   text-align:left;
+}
+
+/*Biography*/
+.dimensions_b{
+  width:100%;
+  height:auto;
+  margin:0 auto;
+
+}
+
+#about_the_group p{
+  text-align: left;
+ }
+
+.clearfix {
+
+   text-align:left;
+   overflow: auto;
+
+}
+
+.current_members img {
+    margin-right: 15px;
+    float: left;
+}
+
+.current_members h3{
+  text-align: left;
+
+ }
+ul.fm{
+  list-style-type:disc;
+    margin-left:10px;
+  color:#e6e6e6;
+}
+.former_members{
+  width:100%;
+  height:auto;
+  text-align: left;
+
+}
+
+/*Discography*/
+.r{
+    text-align:right;
+}
+
+.up{
+   opacity:0.7;
+   width: 50px;
+   height: 50px;
+}
+
+#dis_id {
+   text-align:center;
+   color:#e6e6e6;
+}
+
+ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   color:white;
+
+}
+
+.disc_img {
+   width: 200px;
+   height: 200px;
+   margin:10px;
+}
+
+
+/*Multimedia*/
+.group_multimedia{
+  text-align:center;
+  position:center;
+  color:white;
+
+
+}
+.dimensions_video{
+  width:50%;
+  min-width: 230px;
+  height:auto;
+  margin:0 auto;
+
+}
+.container {
+    margin:auto;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+}
+
+.container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border:0;
+}
+
+.dimensions_rest{
+  width:100%;
+  height:auto;
+  margin:0 auto;
+
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+    color:#e6e6e6;
+    text-decoration:none;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 2%;
+}
+
+.lightbox:target {
+  outline: none;
+  display: block;
+}
+
+
+.m_icons{
+  max-width: 50%;
+    min-width: 200px;
+    height: auto;
+  margin:auto;
+  display: block;
+}
+
+.m_a{
+   text-align:center;
+   color:#e6e6e6;
+   text-decoration:none;
+   width:auto;
+}
+
+/*News*/
+
+.links:link    {color:purple; background-color:transparent; text-decoration:none}
+.links:visited {color:darkred; background-color:transparent; text-decoration:none}
+.links:hover   {color:red; background-color:transparent; text-decoration:underline}
+
+.news{
+   overflow:auto;
+   border: 2px solid grey;
+   border-radius: 5px;
+   height: auto;
+}
+
+.img_news{
+   float:left;
+   width: 200px;
+   height: 240px;
+   margin:10px;
+}
+
+.icons{
+   width:40px;
+   height:auto;
+   margin: 10px;
+}
+
+#news_b{
+   background-image: url("images/bw.png");
+}
+
+.tour{
+  width: 70%;
+  height: auto;
+}
+
+.centerize{
+   text-align:center;
+}
+
+.button {
+
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button1 {
+    background-color: darkred;
+    color: white;
+}
+
+.button1:hover {
+    background-color: red;
+    color: white;
+}
+
+.img_quiz{
+
+      display:inline-block;
+   float:left;
+   width: 200px;
+   height: 240px;
+   margin:10px;
+}
+
+#container_quiz {
+    width:60%;
+    margin:auto;
+    background-color: black;
+    border:4px solid #B0E0E6;
+    border-radius:5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align:center;
+    display: inline-block;
+
+}
+#test{
+  text-align: left;
+  width:50%;
+  margin:auto;
+  background-color: black;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+#test2{
+  width:50%;
+  display: inline-block;
+}
 </style>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script>
@@ -39,10 +385,10 @@ function _(x){
 var size = 5;
 
 function start(){
-	test = _("test");
+	test = _("test2");
 	_("test_status").innerHTML = "Test Your Knowledge in RHCP";
 	randomize();
-	test.innerHTML += "<button onclick='play()'>Play</button>";
+	test.innerHTML += "<button  class='button button1' onclick='play()'>Play</button>";
 
 }
 
@@ -53,7 +399,7 @@ function play(){
 	}else{
 		printResults();
 		randomize();
-		test.innerHTML += "<button onclick='play()'>Play Again</button>";
+		test.innerHTML += "<button class='button button1' onclick='play()'>Play Again</button>";
 		return false;
 	}
 }
@@ -64,24 +410,59 @@ function printResults(){
 		pos = 0;
 		correct = 0;
 }
+function show_image(src, width, height, alt) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    img.alt = alt;
+
+    // This next line will just add it to the <body> tag
+    document.body.appendChild(img);
+}
+function createInput(image){
+   var input = document.createElement('input');
+   input.type = 'image';
+   input.src = image;
+   input.id = "paok";
+   input.onclick = "alert(paok);"
+   $('#paok').on({
+     'click': function(){
+         $('#paok').attr('src','images/test2.png');
+     }
+ });
+
+
+   document.body.appendChild(input);
+
+}
 
 function showQuestion(xml){
     var xmlDoc = xml.responseXML;
     var i;
     var x = xmlDoc.getElementsByTagName("QUESTION");
     i=index;
+    test2 = _("test2");
+    test2.innerHTML = "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chB)' src='images/test.png' width='100' height='100' name='choices' id='B'> "+chB+"<br>";
+
   _("test_status").innerHTML = "Question "+(pos+1)+" of "+size;
   question = x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
 	chA = x[i].getElementsByTagName("CHOICE_ONE")[0].childNodes[0].nodeValue;
 	chB = x[i].getElementsByTagName("CHOICE_TWO")[0].childNodes[0].nodeValue;
 	chC = x[i].getElementsByTagName("CHOICE_THREE")[0].childNodes[0].nodeValue;
 	cch = x[i].getElementsByTagName("ANSWER")[0].childNodes[0].nodeValue;
-	test.innerHTML = "<h3>"+question+"</h3>";
-	test.innerHTML += "<input type='image' onclick='markQuestion(chA)' src='images/test2.png' width='100' height='100' name='choices' id='A'> "+chA+"<br> ";
-	test.innerHTML += "<input type='image' onclick='markQuestion(chB)' src='images/test2.png' width='100' height='100' name='choices' id='B'> "+chB+"<br>";
-	test.innerHTML += "<input type='image' onclick='markQuestion(chC)' src='images/test2.png' width='100' height='100' name='choices' id='C'> "+chC+"<br><br>";
-	test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
-	test.innerHTML += "<button onclick='move()'>Next Answer</button>";
+  var image = x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue;
+  //show_image(image, 100, 100, "paok");
+  //createInput(image);
+  test.innerHTML = "<h3>"+question+"</h3>";
+	test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chA)' src='images/test2.png' width='100' height='100' name='choices' id='A'> "+chA+"<br> ";
+     $("#A").attr("src",image);
+//test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chA)'  width='100' height='100' name='choices' id='A'> "+chA+"<br> ";
+
+	test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chB)' src='images/test2.png' width='100' height='100' name='choices' id='B'> "+chB+"<br>";
+	test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chC)' src='images/test2.png' width='100' height='100' name='choices' id='C'> "+chC+"<br><br>";
+	test.innerHTML += "<button class='button button1' onclick='checkAnswer()'>Submit Answer</button>";
+	test.innerHTML += "<button class='button button1' onclick='move()'>Next Answer</button>";
 }
 
 function markQuestion(element){
@@ -98,14 +479,14 @@ function markQuestion(element){
 }
 
 function checkAnswer(){
-	movement=true;
+
     if(find==1)
-	{
+	{ movement=true;
 	    if(flag == 1){
-		 test.innerHTML += "<input type='image' src='images/correct.png' width='100' height='100' name='choices' > <br> ";
+		 test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' src='images/correct.png' width='100' height='100' name='choices' > <br> ";
 	    }
 	    else{
-		     test.innerHTML += "<input type='image' src='images/wrong.png' width='100' height='100' name='choices' > <br> ";
+		     test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' src='images/wrong.png' width='100' height='100' name='choices' > <br> ";
 	    }
 	}
 	else{
@@ -130,7 +511,29 @@ window.addEventListener("load", start, false);
 </script>
 </head>
 <body>
-<h2 id="test_status"></h2>
-<div id="test"></div>
+  <header>
+      <nav>
+            <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="biography.html">Biography</a></li>
+             <li><a href="discography.html">Discography</a></li>
+             <li><a href="multimedia.html">Multimedia</a></li>
+             <li><a href="news.html">News</a></li>
+             <li><a href="Comments.html">Comments</a></li>
+             <li><a class="active"  href="quiz.html">Quiz</a></li>
+            </ul>
+  </nav>
+  </header>
+     <h2 id="test_status"></h2>
+
+     <div id="container_quiz">
+       <div class="images_container">
+
+          <div id="test">
+            <div id="test2">
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
