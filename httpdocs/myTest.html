@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <style>
-
 /*(General)*/
 h1{
    padding:10px;
@@ -85,6 +84,7 @@ ul > li > a:hover:not(.active) {
       background-color: black;
       margin:0;
    }
+   .fake_img{margin:0;}
 
 
 }
@@ -327,31 +327,58 @@ ul {
 }
 
 #container_quiz {
-    width:60%;
+    width:70%;
     margin:auto;
     background-color: black;
     border:4px solid #B0E0E6;
     border-radius:5px;
     color: #FFFFFF;
     font-weight: bold;
-    text-align:center;
     display: inline-block;
 
 }
-#test{
-  text-align: left;
-  width:50%;
+#test2{
   margin:auto;
   background-color: black;
   color: #FFFFFF;
   font-weight: bold;
-}
-#test2{
-  width:50%;
   display: inline-block;
 }
+
+.fake_img
+    {
+
+      border-width: 4px;
+      border-style: solid;
+      border-color: blue;
+        margin-left:6pt;
+        margin-right: 6px;
+        width:120px;
+        height:120px;
+        display: inline-block;
+
+    }
+    #imagesco
+    {
+        text-align:center;
+        width:70%;
+        height: 50%;
+        margin: auto;
+    }
+    .centerwrapper
+    {
+       margin: auto;
+       width: 100%;
+       height: 30%;
+    }
+    #test1000{
+      visibility: hidden;
+    }
 </style>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+
 <script>
 
 function loadDoc() {
@@ -364,6 +391,7 @@ function loadDoc() {
   xhttp.open("GET", "quizData.xml", true);
   xhttp.send();
 }
+
 var pos = 0, find = 0, flag=0, movement=false, test, test_status, question, choice, choices, chA, chB, chC,cch, correct = 0;
 
 var positions = [];
@@ -382,34 +410,40 @@ function randomize(){
 function _(x){
 	return document.getElementById(x);
 }
-var size = 5;
+var size = 2;
 
 function start(){
-	test = _("test2");
+	test = _("test");
 	_("test_status").innerHTML = "Test Your Knowledge in RHCP";
 	randomize();
-	test.innerHTML += "<button  class='button button1' onclick='play()'>Play</button>";
-
-}
-
-function play(){
-	if(pos<size){
-		index = positions[pos];
-    loadDoc();
-	}else{
-		printResults();
-		randomize();
-		test.innerHTML += "<button class='button button1' onclick='play()'>Play Again</button>";
-		return false;
-	}
+	imagesco.innerHTML = "<button  class='button button1 centerize' onclick='play()'>Play</button>";
 }
 
 function printResults(){
-	test.innerHTML = "<h2>You got "+correct+" of "+size+" questions correct</h2>";
+	imagesco.innerHTML = "<h2>You got "+correct+" of "+size+" questions correct</h2>";
 		_("test_status").innerHTML = "Test Completed";
 		pos = 0;
 		correct = 0;
 }
+
+function play(){
+
+  test1000.innerHTML = "paok";
+	if(pos<size){
+		index = positions[pos];
+      test3.innerHTML= "";
+    loadDoc();
+	}else{
+		printResults();
+		randomize();
+		imagesco.innerHTML += "<button class='button button1 ' onclick='play()'>Play Again</button>";
+    test_question.innerHTML = "";
+    test2.innerHTML= "";
+    test3.innerHTML= "";
+		return false;
+	}
+}
+
 function show_image(src, width, height, alt) {
     var img = document.createElement("img");
     img.src = src;
@@ -417,24 +451,7 @@ function show_image(src, width, height, alt) {
     img.height = height;
     img.alt = alt;
 
-    // This next line will just add it to the <body> tag
     document.body.appendChild(img);
-}
-function createInput(image){
-   var input = document.createElement('input');
-   input.type = 'image';
-   input.src = image;
-   input.id = "paok";
-   input.onclick = "alert(paok);"
-   $('#paok').on({
-     'click': function(){
-         $('#paok').attr('src','images/test2.png');
-     }
- });
-
-
-   document.body.appendChild(input);
-
 }
 
 function showQuestion(xml){
@@ -442,8 +459,8 @@ function showQuestion(xml){
     var i;
     var x = xmlDoc.getElementsByTagName("QUESTION");
     i=index;
-    test2 = _("test2");
-    test2.innerHTML = "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chB)' src='images/test.png' width='100' height='100' name='choices' id='B'> "+chB+"<br>";
+    //  test = _("test2");
+//    test2.innerHTML = "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chB)' src='images/test.png' width='100' height='100' name='choices' id='B'> "+chB+"<br>";
 
   _("test_status").innerHTML = "Question "+(pos+1)+" of "+size;
   question = x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
@@ -454,16 +471,24 @@ function showQuestion(xml){
   var image = x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue;
   //show_image(image, 100, 100, "paok");
   //createInput(image);
-  test.innerHTML = "<h3>"+question+"</h3>";
-	test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chA)' src='images/test2.png' width='100' height='100' name='choices' id='A'> "+chA+"<br> ";
+  var paok = " paok";
+  _("test_question").innerHTML = ""+question;
+  _("test1000").innerHTML = ""+paok;
+  var imagesco=_("imagesco");
+	imagesco.innerHTML = "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chA)' name='choices' id='A'>";
      $("#A").attr("src",image);
+  imagesco.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chB)' src='images/test2.png' name='choices' id='B'>";
+        $("#B").attr("src",image);
+  imagesco.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chC)' src='images/test2.png' name='choices' id='C'>";
+           $("#C").attr("src",image);
 //test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chA)'  width='100' height='100' name='choices' id='A'> "+chA+"<br> ";
 
-	test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chB)' src='images/test2.png' width='100' height='100' name='choices' id='B'> "+chB+"<br>";
-	test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chC)' src='images/test2.png' width='100' height='100' name='choices' id='C'> "+chC+"<br><br>";
-	test.innerHTML += "<button class='button button1' onclick='checkAnswer()'>Submit Answer</button>";
-	test.innerHTML += "<button class='button button1' onclick='move()'>Next Answer</button>";
+//	imagesco.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chB)' src='images/test2.png' width='100' height='100' name='choices' id='B'> "+chB+"<br>";
+//	imagesco.innerHTML    += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chC)' src='images/test2.png' width='100' height='100' name='choices' id='C'> "+chC+"<br><br>";
+	test2.innerHTML = "<button class='button button1' onclick='checkAnswer()'>Submit Answer</button>";
+	test2.innerHTML += "<button class='button button1' onclick='move()'>Next Answer</button>";
 }
+
 
 function markQuestion(element){
 	find=1;
@@ -480,19 +505,27 @@ function markQuestion(element){
 
 function checkAnswer(){
 
+  //el1 = document.querySelector("#A");
+  //el1.style.borderColor = "red";
+    document.getElementById("A").style.borderColor = "red";
     if(find==1)
 	{ movement=true;
 	    if(flag == 1){
-		 test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' src='images/correct.png' width='100' height='100' name='choices' > <br> ";
+
+		 test3.innerHTML = "<input type='image' class='fake_img' class='img_quiz' src='images/correct.png' width='100' height='100' name='choices' > <br> ";
 	    }
 	    else{
-		     test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' src='images/wrong.png' width='100' height='100' name='choices' > <br> ";
+        test1000.innerHTML = "Wrong";
+        document.getElementById("test1000").setAttribute("style", "visibility:visible;")
+        //test1000.innerHTML =""+paok;
+		     //test3.innerHTML = "<input type='image' class='fake_img' class='img_quiz' src='images/wrong.png' width='100' height='100' name='choices' > <br> ";
 	    }
 	}
 	else{
 		  alert('Please make a selection!');
     }
 }
+
 
 function move(){
 	if(movement)
@@ -501,6 +534,7 @@ function move(){
 	  find=0;
 	  flag=0;
 	  movement=false;
+    document.getElementById("test1000").setAttribute("style", "visibility:hidden;")
 	  play();
 	}else{
 		alert('Please submit an answer!');
@@ -525,15 +559,15 @@ window.addEventListener("load", start, false);
   </nav>
   </header>
      <h2 id="test_status"></h2>
+      <div id="container_quiz">
+       <h3 id="test_question"></h3>
+       <h3 id="test1000"></h3>
 
-     <div id="container_quiz">
-       <div class="images_container">
-
-          <div id="test">
-            <div id="test2">
-        </div>
+        <div id="imagesco"></div>
+         <div id="test3"></div>
+          <div id="test2"></div>
       </div>
-    </div>
-  </div>
+
 </body>
 </html>
+
