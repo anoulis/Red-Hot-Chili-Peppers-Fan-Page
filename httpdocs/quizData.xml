@@ -5,6 +5,7 @@
     <CHOICE_TWO>USA</CHOICE_TWO>
     <CHOICE_THREE>Columbia</CHOICE_THREE>
     <ANSWER>Bob Dylan</ANSWER>
+    <IMAGE>images/test.png</IMAGE>
   </QUESTION>
   <QUESTION>
     <TITLE>TWO</TITLE>
@@ -12,6 +13,7 @@
     <CHOICE_TWO>USA</CHOICE_TWO>
     <CHOICE_THREE>Columbia</CHOICE_THREE>
     <ANSWER>Bob Dylan</ANSWER>
+    <IMAGE>images/test.png</IMAGE>
   </QUESTION>
   <QUESTION>
     <TITLE>THREE</TITLE>
@@ -19,6 +21,7 @@
     <CHOICE_TWO>USA</CHOICE_TWO>
     <CHOICE_THREE>Columbia</CHOICE_THREE>
     <ANSWER>Bob Dylan</ANSWER>
+    <IMAGE>images/test.png</IMAGE>
   </QUESTION>
   <QUESTION>
     <TITLE>FOUR</TITLE>
@@ -26,6 +29,7 @@
     <CHOICE_TWO>USA</CHOICE_TWO>
     <CHOICE_THREE>Columbia</CHOICE_THREE>
     <ANSWER>Bob Dylan</ANSWER>
+    <IMAGE>images/test.png</IMAGE>
   </QUESTION>
   <QUESTION>
     <TITLE>FIVE</TITLE>
@@ -33,6 +37,7 @@
     <CHOICE_TWO>USA</CHOICE_TWO>
     <CHOICE_THREE>Columbia</CHOICE_THREE>
     <ANSWER>Bob Dylan</ANSWER>
+    <IMAGE>images/test.png</IMAGE>
   </QUESTION>
   <QUESTION>
     <TITLE>SIX</TITLE>
@@ -40,6 +45,7 @@
     <CHOICE_TWO>USA</CHOICE_TWO>
     <CHOICE_THREE>Columbia</CHOICE_THREE>
     <ANSWER>Bob Dylan</ANSWER>
+    <IMAGE>images/test.png</IMAGE>
   </QUESTION>
   <QUESTION>
     <TITLE>SEVEN</TITLE>
@@ -47,5 +53,6 @@
     <CHOICE_TWO>USA</CHOICE_TWO>
     <CHOICE_THREE>Columbia</CHOICE_THREE>
     <ANSWER>1985</ANSWER>
+    <IMAGE>images/test.png</IMAGE>
   </QUESTION>
 </QUIZ>
