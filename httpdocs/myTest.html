@@ -337,7 +337,7 @@ ul {
     display: inline-block;
 
 }
-#test2{
+#buttons_container{
   margin:auto;
   background-color: black;
   color: #FFFFFF;
@@ -350,7 +350,7 @@ ul {
 
       border-width: 4px;
       border-style: solid;
-      border-color: blue;
+      border-color: grey;
         margin-left:6pt;
         margin-right: 6px;
         width:120px;
@@ -358,7 +358,7 @@ ul {
         display: inline-block;
 
     }
-    #imagesco
+    #images_container
     {
         text-align:center;
         width:70%;
@@ -371,8 +371,9 @@ ul {
        width: 100%;
        height: 30%;
     }
-    #test1000{
+    #warning{
       visibility: hidden;
+
     }
 </style>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -381,18 +382,9 @@ ul {
 
 <script>
 
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      showQuestion(this);
-    }
-  };
-  xhttp.open("GET", "quizData.xml", true);
-  xhttp.send();
-}
 
-var pos = 0, find = 0, flag=0, movement=false, test, test_status, question, choice, choices, chA, chB, chC,cch, correct = 0;
+var pos = 0, find = 0, flag=0, movement=false, test, test_status, question,
+ choice, choices, chA, chB, chC,chCor, correct = 0, first_time = true;
 
 var positions = [];
 
@@ -407,137 +399,146 @@ function randomize(){
      }
 }
 
-function _(x){
-	return document.getElementById(x);
+var size = 5;
+
+function prepareDisplay(){
+  quiz_status.innerHTML = "";
+   quiz_question.innerHTML = "";
+     images_container.innerHTML = "";
+      buttons_container.innerHTML = "";
+       document.getElementById("warning").setAttribute("style", "visibility:hidden;")
 }
-var size = 2;
 
 function start(){
-	test = _("test");
-	_("test_status").innerHTML = "Test Your Knowledge in RHCP";
-	randomize();
-	imagesco.innerHTML = "<button  class='button button1 centerize' onclick='play()'>Play</button>";
+    prepareDisplay();
+  	randomize();
+    quiz_status.innerHTML = "Test Your Knowledge in RHCP";
+	  buttons_container.innerHTML = "<button  class='button button1 centerize' onclick='play()'>Play</button>";
 }
 
 function printResults(){
-	imagesco.innerHTML = "<h2>You got "+correct+" of "+size+" questions correct</h2>";
-		_("test_status").innerHTML = "Test Completed";
+		quiz_status.innerHTML = "Test Completed";
+    quiz_status.innerHTML += "<h2>You got "+correct+" of "+size+" questions correct</h2>";
+    buttons_container.innerHTML= "<button class='button button1 ' onclick='play()'>Play Again</button>";
 		pos = 0;
 		correct = 0;
 }
 
 function play(){
-
-  test1000.innerHTML = "paok";
+  prepareDisplay();
 	if(pos<size){
 		index = positions[pos];
-      test3.innerHTML= "";
     loadDoc();
 	}else{
 		printResults();
 		randomize();
-		imagesco.innerHTML += "<button class='button button1 ' onclick='play()'>Play Again</button>";
-    test_question.innerHTML = "";
-    test2.innerHTML= "";
-    test3.innerHTML= "";
 		return false;
 	}
 }
 
-function show_image(src, width, height, alt) {
-    var img = document.createElement("img");
-    img.src = src;
-    img.width = width;
-    img.height = height;
-    img.alt = alt;
 
-    document.body.appendChild(img);
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      showQuestion(this);
+    }
+  };
+  xhttp.open("GET", "quizData.xml", true);
+  xhttp.send();
 }
 
 function showQuestion(xml){
-    var xmlDoc = xml.responseXML;
-    var i;
-    var x = xmlDoc.getElementsByTagName("QUESTION");
-    i=index;
-    //  test = _("test2");
-//    test2.innerHTML = "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chB)' src='images/test.png' width='100' height='100' name='choices' id='B'> "+chB+"<br>";
 
-  _("test_status").innerHTML = "Question "+(pos+1)+" of "+size;
-  question = x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
-	chA = x[i].getElementsByTagName("CHOICE_ONE")[0].childNodes[0].nodeValue;
-	chB = x[i].getElementsByTagName("CHOICE_TWO")[0].childNodes[0].nodeValue;
-	chC = x[i].getElementsByTagName("CHOICE_THREE")[0].childNodes[0].nodeValue;
-	cch = x[i].getElementsByTagName("ANSWER")[0].childNodes[0].nodeValue;
-  var image = x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue;
-  //show_image(image, 100, 100, "paok");
-  //createInput(image);
-  var paok = " paok";
-  _("test_question").innerHTML = ""+question;
-  _("test1000").innerHTML = ""+paok;
-  var imagesco=_("imagesco");
-	imagesco.innerHTML = "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chA)' name='choices' id='A'>";
-     $("#A").attr("src",image);
-  imagesco.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chB)' src='images/test2.png' name='choices' id='B'>";
-        $("#B").attr("src",image);
-  imagesco.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chC)' src='images/test2.png' name='choices' id='C'>";
-           $("#C").attr("src",image);
-//test.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chA)'  width='100' height='100' name='choices' id='A'> "+chA+"<br> ";
+  var xmlDoc = xml.responseXML;
+  var i;
+  var x = xmlDoc.getElementsByTagName("QUESTION");
+  question = x[index].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+	chA = x[index].getElementsByTagName("CHOICE_ONE")[0].childNodes[0].nodeValue;
+	chB = x[index].getElementsByTagName("CHOICE_TWO")[0].childNodes[0].nodeValue;
+	chC = x[index].getElementsByTagName("CHOICE_THREE")[0].childNodes[0].nodeValue;
+	chCor = x[index].getElementsByTagName("ANSWER")[0].childNodes[0].nodeValue;
 
-//	imagesco.innerHTML += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chB)' src='images/test2.png' width='100' height='100' name='choices' id='B'> "+chB+"<br>";
-//	imagesco.innerHTML    += "<input type='image' class='fake_img' class='img_quiz' onclick='markQuestion(chC)' src='images/test2.png' width='100' height='100' name='choices' id='C'> "+chC+"<br><br>";
-	test2.innerHTML = "<button class='button button1' onclick='checkAnswer()'>Submit Answer</button>";
-	test2.innerHTML += "<button class='button button1' onclick='move()'>Next Answer</button>";
+  quiz_status.innerHTML = "Question "+(pos+1)+" of "+size;
+  quiz_question.innerHTML = ""+question;
+  warning.innerHTML = "nothing";
+	images_container.innerHTML = "<input type='image' class='fake_img' class='img_quiz' id='A' onclick='markQuestion(id)' >";
+  $("#A").attr("src",chA);
+  images_container.innerHTML += "<input type='image' class='fake_img' class='img_quiz' id='B' onclick='markQuestion(id)'>";
+  $("#B").attr("src",chB);
+  images_container.innerHTML += "<input type='image' class='fake_img' class='img_quiz' id='C' onclick='markQuestion(id)'>";
+  $("#C").attr("src",chC);
+  buttons_container.innerHTML = "<button class='button button1' onclick='submitAnswer()'>Submit Answer</button>";
+	buttons_container.innerHTML += "<button class='button button1' onclick='move()'>Next Answer</button>";
+
 }
 
+function refreshImageBorder(){
+  document.getElementById('A').style.borderColor = "grey";
+  document.getElementById('B').style.borderColor = "grey";
+  document.getElementById('C').style.borderColor = "grey";
+
+}
 
 function markQuestion(element){
+  choice = element;
+  refreshImageBorder();
+  document.getElementById(choice).style.borderColor = "blue";
 	find=1;
-	choice =element;
-  var corAns = x[i].getElementsByTagName("ANSWER")[0].childNodes[0].nodeValue;
-	if(choice == corAns){
-		 flag=1;
-		correct++;
-	}
-	else{
-		flag=0;
-	}
+   if(first_time){
+      	if(choice == chCor){
+      		 flag=1;
+      		correct++;
+      	}
+      	else{
+      		flag=0;
+      	}
+   }
 }
 
-function checkAnswer(){
+function submitAnswer(){
 
-  //el1 = document.querySelector("#A");
-  //el1.style.borderColor = "red";
-    document.getElementById("A").style.borderColor = "red";
     if(find==1)
-	{ movement=true;
-	    if(flag == 1){
-
-		 test3.innerHTML = "<input type='image' class='fake_img' class='img_quiz' src='images/correct.png' width='100' height='100' name='choices' > <br> ";
-	    }
-	    else{
-        test1000.innerHTML = "Wrong";
-        document.getElementById("test1000").setAttribute("style", "visibility:visible;")
-        //test1000.innerHTML =""+paok;
-		     //test3.innerHTML = "<input type='image' class='fake_img' class='img_quiz' src='images/wrong.png' width='100' height='100' name='choices' > <br> ";
-	    }
-	}
-	else{
-		  alert('Please make a selection!');
+	   {
+       if(first_time){
+         movement=true;
+         if(flag == 1){
+          document.getElementById(choice).style.borderColor = "green";
+          warning.innerHTML = "Correct!";
+          document.getElementById("warning").setAttribute("style", "visibility:visible;");
+	       }
+	       else{
+          document.getElementById(choice).style.borderColor = "red";
+          warning.innerHTML = "Wrong!";
+          document.getElementById("warning").setAttribute("style", "visibility:visible;");
+         }
+         first_time=false;
+       }else{
+         warning.innerHTML = "You have already submit an Answear!";
+         document.getElementById("warning").setAttribute("style", "visibility:visible;")
+         document.getElementById("question_result").setAttribute("style", "visibility:hidden;")
+       }
+	  }
+	  else{
+        warning.innerHTML = "Please make a selection first!";
+        document.getElementById("warning").setAttribute("style", "visibility:visible;");
     }
+
 }
 
 
 function move(){
 	if(movement)
-	{
-	  pos++;
+	{ pos++;
 	  find=0;
 	  flag=0;
 	  movement=false;
-    document.getElementById("test1000").setAttribute("style", "visibility:hidden;")
+    first_time = true;
+    document.getElementById("warning").setAttribute("style", "visibility:hidden;")
 	  play();
 	}else{
-		alert('Please submit an answer!');
+    warning.innerHTML = "Please submit an answer!";
+    document.getElementById("warning").setAttribute("style", "visibility:visible;");
 	}
 }
 
@@ -558,16 +559,12 @@ window.addEventListener("load", start, false);
             </ul>
   </nav>
   </header>
-     <h2 id="test_status"></h2>
-      <div id="container_quiz">
-       <h3 id="test_question"></h3>
-       <h3 id="test1000"></h3>
-
-        <div id="imagesco"></div>
-         <div id="test3"></div>
-          <div id="test2"></div>
-      </div>
-
+    <div id="container_quiz">
+      <h2 id="quiz_status"></h2>
+       <h3 id="quiz_question"></h3>
+         <div id="images_container"></div>
+          <h3 id="warning"></h3>
+           <div id="buttons_container"></div>
+    </div>
 </body>
 </html>
-
