@@ -1,58 +1,51 @@
 <QUIZ>
   <QUESTION>
-    <TITLE>ONE</TITLE>
-    <CHOICE_ONE>Bob Dylan</CHOICE_ONE>
-    <CHOICE_TWO>USA</CHOICE_TWO>
-    <CHOICE_THREE>Columbia</CHOICE_THREE>
-    <ANSWER>Bob Dylan</ANSWER>
-    <IMAGE>images/test.png</IMAGE>
+    <TITLE>Who is the Singer of RHCP ?</TITLE>
+    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
+    <ANSWER>B</ANSWER>
   </QUESTION>
   <QUESTION>
-    <TITLE>TWO</TITLE>
-    <CHOICE_ONE>Bob Dylan</CHOICE_ONE>
-    <CHOICE_TWO>USA</CHOICE_TWO>
-    <CHOICE_THREE>Columbia</CHOICE_THREE>
-    <ANSWER>Bob Dylan</ANSWER>
-    <IMAGE>images/test.png</IMAGE>
+    <TITLE>Who is the Singer of RHCP ?</TITLE>
+    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
+    <ANSWER>B</ANSWER>
   </QUESTION>
   <QUESTION>
-    <TITLE>THREE</TITLE>
-    <CHOICE_ONE>Bob Dylan</CHOICE_ONE>
-    <CHOICE_TWO>USA</CHOICE_TWO>
-    <CHOICE_THREE>Columbia</CHOICE_THREE>
-    <ANSWER>Bob Dylan</ANSWER>
-    <IMAGE>images/test.png</IMAGE>
+    <TITLE>Who is the Singer of RHCP ?</TITLE>
+    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
+    <ANSWER>B</ANSWER>
   </QUESTION>
   <QUESTION>
-    <TITLE>FOUR</TITLE>
-    <CHOICE_ONE>Bob Dylan</CHOICE_ONE>
-    <CHOICE_TWO>USA</CHOICE_TWO>
-    <CHOICE_THREE>Columbia</CHOICE_THREE>
-    <ANSWER>Bob Dylan</ANSWER>
-    <IMAGE>images/test.png</IMAGE>
+    <TITLE>Who is the Singer of RHCP ?</TITLE>
+    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
+    <ANSWER>B</ANSWER>
   </QUESTION>
   <QUESTION>
-    <TITLE>FIVE</TITLE>
-    <CHOICE_ONE>Bob Dylan</CHOICE_ONE>
-    <CHOICE_TWO>USA</CHOICE_TWO>
-    <CHOICE_THREE>Columbia</CHOICE_THREE>
-    <ANSWER>Bob Dylan</ANSWER>
-    <IMAGE>images/test.png</IMAGE>
+    <TITLE>Who is the Singer of RHCP ?</TITLE>
+    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
+    <ANSWER>B</ANSWER>
   </QUESTION>
   <QUESTION>
-    <TITLE>SIX</TITLE>
-    <CHOICE_ONE>Bob Dylan</CHOICE_ONE>
-    <CHOICE_TWO>USA</CHOICE_TWO>
-    <CHOICE_THREE>Columbia</CHOICE_THREE>
-    <ANSWER>Bob Dylan</ANSWER>
-    <IMAGE>images/test.png</IMAGE>
+    <TITLE>Who is the Singer of RHCP ?</TITLE>
+    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
+    <ANSWER>B</ANSWER>
   </QUESTION>
   <QUESTION>
-    <TITLE>SEVEN</TITLE>
-    <CHOICE_ONE>Bob Dylan</CHOICE_ONE>
-    <CHOICE_TWO>USA</CHOICE_TWO>
-    <CHOICE_THREE>Columbia</CHOICE_THREE>
-    <ANSWER>1985</ANSWER>
-    <IMAGE>images/test.png</IMAGE>
+    <TITLE>Who is the Singer of RHCP ?</TITLE>
+    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
+    <ANSWER>B</ANSWER>
   </QUESTION>
 </QUIZ>
