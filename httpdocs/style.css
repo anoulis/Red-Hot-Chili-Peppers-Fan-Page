@@ -1,4 +1,5 @@
 /*(General)*/
+
 h1{
    padding:10px;
    text-align:center;
@@ -26,10 +27,9 @@ article{
 
 footer {
    background-color: #333;
-   color: #e6e6e6; 
-   text-align: center; 
+   color: #e6e6e6;
+   text-align: center;
    line-height: 3em;
-
 }
 
 * {
@@ -79,8 +79,8 @@ ul > li > a:hover:not(.active) {
       background-color: black;
       margin:0;
    }
-   
-   
+
+
 }
 
 /*For index*/
@@ -101,18 +101,18 @@ ul > li > a:hover:not(.active) {
   width:100%;
   height:auto;
   margin:0 auto;
-  
+
 }
- 
+
 #about_the_group p{
   text-align: left;
- }   
- 
+ }
+
 .clearfix {
-  
+
    text-align:left;
    overflow: auto;
-   
+
 }
 
 .current_members img {
@@ -122,7 +122,7 @@ ul > li > a:hover:not(.active) {
 
 .current_members h3{
   text-align: left;
-  
+
  }
 ul.fm{
   list-style-type:disc;
@@ -133,7 +133,7 @@ ul.fm{
   width:100%;
   height:auto;
   text-align: left;
-  
+
 }
 
 /*Discography*/
@@ -157,7 +157,7 @@ ul {
    margin: 0;
    padding: 0;
    color:white;
-  
+
 }
 
 .disc_img {
@@ -166,21 +166,20 @@ ul {
    margin:10px;
 }
 
-
 /*Multimedia*/
 .group_multimedia{
   text-align:center;
   position:center;
   color:white;
-  
-  
+
+
 }
 .dimensions_video{
   width:50%;
   min-width: 230px;
   height:auto;
   margin:0 auto;
-  
+
 }
 .container {
     margin:auto;
@@ -189,7 +188,7 @@ ul {
     overflow: hidden;
     padding-bottom: 56.25%;
 }
- 
+
 .container iframe {
     position: absolute;
     top:0;
@@ -203,7 +202,7 @@ ul {
   width:100%;
   height:auto;
   margin:0 auto;
-  
+
 }
 
 .lightbox {
@@ -287,7 +286,7 @@ ul {
 }
 
 .button {
-    
+
     border: none;
     color: white;
     padding: 16px 32px;
@@ -327,7 +326,7 @@ ul {
     margin:auto;
     padding: 0 25px 40px 10px;
     background-color: darkred;
-    border:4px solid #B0E0E6;
+    border:4px solid #8B0000;
     border-radius:5px;
     color: #FFFFFF;
     font-weight: bold;
@@ -360,7 +359,7 @@ button2 {
 .button2:hover {
     background-color: black;
     color: white;
-  
+
 }
 
 .button2 a {
@@ -377,3 +376,65 @@ button2 {
     display:none;
     width: 90px;
 }
+
+.img_quiz{
+
+      display:inline-block;
+   float:left;
+   width: 200px;
+   height: 240px;
+   margin:10px;
+}
+
+#container_quiz {
+    width:70%;
+    margin:auto;
+    background-color: black;
+    border:4px solid #8b0000;
+    border-radius:5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+#buttons_container{
+  margin:auto;
+  background-color: black;
+  color: #FFFFFF;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.fake_img
+    {
+
+      border-width: 4px;
+      border-style: solid;
+      border-color: grey;
+        margin-left:6pt;
+        margin-right: 6px;
+        width:150px;
+        height:150px;
+        display: inline-block;
+
+    }
+    #images_container
+    {
+        text-align:center;
+        width:70%;
+        height: 50%;
+        margin: auto;
+    }
+    .centerwrapper
+    {
+       margin: auto;
+       width: 100%;
+       height: 30%;
+    }
+
+    #warning{
+      visibility: hidden;
+
+    }
