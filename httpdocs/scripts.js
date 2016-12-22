@@ -16,31 +16,24 @@ function randomize(){
 
 var size = 5;
 
-function prepareDisplay(){
-  quiz_status.innerHTML = "";
-   quiz_question.innerHTML = "";
-     images_container.innerHTML = "";
-      buttons_container.innerHTML = "";
-       document.getElementById("warning").setAttribute("style", "visibility:hidden;")
-}
-
 function start(){
-    prepareDisplay();
+	document.getElementById("warning").setAttribute("style", "visibility:hidden;")
   	randomize();
     quiz_status.innerHTML = "Test Your Knowledge in RHCP";
 	  buttons_container.innerHTML = "<button  class='button button1 centerize' onclick='play()'>Play</button>";
 }
 
 function printResults(){
-		quiz_status.innerHTML = "Test Completed";
-    quiz_status.innerHTML += "<h2>You got "+correct+" of "+size+" questions correct</h2>";
+	quiz_question.innerHTML = "";
+   	images_container.innerHTML = "";
+	quiz_status.innerHTML = "Test Completed";
+  	 quiz_status.innerHTML += "<h2>You got "+correct+" of "+size+" questions correct</h2>";
     buttons_container.innerHTML= "<button class='button button1 ' onclick='play()'>Play Again</button>";
 		pos = 0;
 		correct = 0;
 }
 
 function play(){
-  prepareDisplay();
 	if(pos<size){
 		index = positions[pos];
     loadDoc();
