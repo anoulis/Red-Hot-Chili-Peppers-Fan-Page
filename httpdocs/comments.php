@@ -19,7 +19,7 @@ function show(){
 		$connect= mysql_connect("webpagesdb.it.auth.gr:3306","rhcpuser","rhcp123");
 		if ($connect){
 			mysql_select_db("comments",$connect);
-                        if(strlen($name) <= '1'){ $name = 'Guest';}
+                        if(empty($email)){ $email = 'Guest';}
 			$query = "INSERT INTO comments(EMAIL,COMMENT) VALUES (\"" . $email . "\",\"" . $comment . "\")";
 			if (mysql_query($query)){
                               header("location: comments.php");
