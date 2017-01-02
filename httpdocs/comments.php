@@ -9,17 +9,17 @@ function show(){
 		$query2 = "SELECT * FROM comments";
 		$result = mysql_query ($query2);
 		while ($row = mysql_fetch_array($result)){
-		echo $row['EMAIL'] . "<br>" . $row['COMMENT'] . "<br>".  $row['DATE'] . "<br>" ;
+		echo  strip_tags($row['EMAIL']) . "<br>" .  strip_tags($row['COMMENT']) . "<br>".   strip_tags($row['DATE']) . "<br>" ;
 		}
 }
 
 	if ($_POST){
-		$email= $_POST["email"];
-		$comment= $_POST["comment"];
+		$email= addslashes(strip_tags($_POST["email"]));
+		$comment= addslashes(strip_tags($_POST["comment"]));
 		$connect= mysql_connect("webpagesdb.it.auth.gr:3306","rhcpuser","rhcp123");
 		if ($connect){
 			mysql_select_db("comments",$connect);
-                        if(empty($email)){ $email = 'Guest';}
+                        if(empty($email) ){ $email= 'Guest';}
 			$query = "INSERT INTO comments(EMAIL,COMMENT) VALUES (\"" . $email . "\",\"" . $comment . "\")";
 			if (mysql_query($query)){
                               header("location: comments.php");
