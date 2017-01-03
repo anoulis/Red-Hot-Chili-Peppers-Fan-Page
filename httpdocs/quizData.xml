@@ -7,45 +7,38 @@
     <ANSWER>B</ANSWER>
   </QUESTION>
   <QUESTION>
-    <TITLE>Who is the Singer of RHCP ?</TITLE>
-    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
-    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
-    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
+    <TITLE>Which is the first album of RHCP ?</TITLE>
+    <CHOICE_ONE>images/rhcp1.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/rhcp6.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/rhcp11.jpg</CHOICE_THREE>
+    <ANSWER>A</ANSWER>
+  </QUESTION>
+  <QUESTION>
+    <TITLE>When RHCP was formed?</TITLE>
+    <CHOICE_ONE>images/1983.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/1981.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/1985.jpg</CHOICE_THREE>
+    <ANSWER>A</ANSWER>
+  </QUESTION>
+  <QUESTION>
+    <TITLE>Where did the RHCP was formed?</TITLE>
+    <CHOICE_ONE>images/ny.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/la.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/miami.jpg</CHOICE_THREE>
     <ANSWER>B</ANSWER>
   </QUESTION>
   <QUESTION>
-    <TITLE>Who is the Singer of RHCP ?</TITLE>
-    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
+    <TITLE>Who is the Drummer of RHCP ?</TITLE>
+    <CHOICE_ONE>images/michael2.jpg</CHOICE_ONE>
     <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
-    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
-    <ANSWER>B</ANSWER>
+    <CHOICE_THREE>images/chad.jpg</CHOICE_THREE>
+    <ANSWER>C</ANSWER>
   </QUESTION>
   <QUESTION>
-    <TITLE>Who is the Singer of RHCP ?</TITLE>
-    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
-    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
-    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
-    <ANSWER>B</ANSWER>
-  </QUESTION>
-  <QUESTION>
-    <TITLE>Who is the Singer of RHCP ?</TITLE>
-    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
-    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
-    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
-    <ANSWER>B</ANSWER>
-  </QUESTION>
-  <QUESTION>
-    <TITLE>Who is the Singer of RHCP ?</TITLE>
-    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
-    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
-    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
-    <ANSWER>B</ANSWER>
-  </QUESTION>
-  <QUESTION>
-    <TITLE>Who is the Singer of RHCP ?</TITLE>
-    <CHOICE_ONE>images/chad.jpg</CHOICE_ONE>
-    <CHOICE_TWO>images/anthony.jpg</CHOICE_TWO>
-    <CHOICE_THREE>images/josh.jpg</CHOICE_THREE>
-    <ANSWER>B</ANSWER>
+    <TITLE>Which is the most sold album of RHCP ?</TITLE>
+    <CHOICE_ONE>images/rhcp1.jpg</CHOICE_ONE>
+    <CHOICE_TWO>images/rhcp11.jpg</CHOICE_TWO>
+    <CHOICE_THREE>images/rhcp5.jpg</CHOICE_THREE>
+    <ANSWER>C</ANSWER>
   </QUESTION>
 </QUIZ>

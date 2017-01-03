@@ -32,6 +32,16 @@ footer {
    line-height: 3em;
 }
 
+.forcefooter {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   background-color: #333;
+   color: #e6e6e6;
+   text-align: center;
+   line-height: 3em;
+}
+
 * {
  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -79,7 +89,9 @@ ul > li > a:hover:not(.active) {
       background-color: black;
       margin:0;
    }
-
+ .forcefooter{
+position: relative;
+}
 
 }
 
