@@ -450,3 +450,17 @@ button2 {
       visibility: hidden;
 
     }
+
+/*comments*/
+
+textarea[name=comment] {
+    resize: none;
+	width: 270px;
+  height: 150px;
+
+}
+
+input[name=email] {
+    width: 270px
+
+ }
