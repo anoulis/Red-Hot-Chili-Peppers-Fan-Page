@@ -63,27 +63,24 @@ function show(){
            
 }
 
-		if ($_POST){
+	if ($_POST){
 			$email= addslashes(strip_tags($_POST["email"]));
 			$comment= addslashes(strip_tags($_POST["comment"]));
-			$connect= mysql_connect("webpagesdb.it.auth.gr:3306","rhcpuser","rhcp123");
-			if ($connect){
-				mysql_select_db("comments",$connect);
-					if(empty($email) ){ $email= 'Guest';}
-					$query = "INSERT INTO comments(EMAIL,COMMENT) VALUES (\"" . $email . "\",\"" . $comment . "\")";
-					if (mysql_query($query)){
+			mysql_select_db("comments",$connect);
+			if(empty($email) ){ 
+                        $email= 'Guest';
+                        }
+			$query = "INSERT INTO comments(EMAIL,COMMENT) VALUES (\"" . $email . "\",\"" . $comment . "\")";
+			if (mysql_query($query)){
                         $page=$_GET{'page'};  
                         header("location:  $_PHP_SELF?page=$page");
                         exit;
-			}
-			else{	 
-				die( "Failed: ". mysql_error());
-			}
 			}
 		else{
 			die("Failed to connect: ".mysql_error());
 		}
 		}
+		
 
 include('comments.html');
 ?> 
