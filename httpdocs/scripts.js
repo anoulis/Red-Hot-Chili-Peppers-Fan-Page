@@ -122,7 +122,7 @@ function submitAnswer(){
          }
          first_time=false;
        }else{
-         warning.innerHTML = "You have already submit an Answear!";
+         warning.innerHTML = "You have already submit an Answer!";
          document.getElementById("warning").setAttribute("style", "visibility:visible;")
          document.getElementById("question_result").setAttribute("style", "visibility:hidden;")
        }
