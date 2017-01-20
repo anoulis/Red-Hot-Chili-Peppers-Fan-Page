@@ -39,7 +39,7 @@ function show(){
          
  
 		if($page == $last-1){
-                        if (page==0){} 
+                        if ($page==0){} 
                        else{
 			$previous = $page-1;
 			echo "<a href = \"$_PHP_SELF?page=$previous\">Previous</a> ";
