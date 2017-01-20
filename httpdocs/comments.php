@@ -39,7 +39,7 @@ function show(){
          
  
 		if($page == $last-1){
-                        if ($page==0){} 
+                       if ($page==0){ echo "$page";} 
                        else{
 			$previous = $page-1;
 			echo "<a href = \"$_PHP_SELF?page=$previous\">Previous</a> ";
@@ -52,8 +52,11 @@ function show(){
             echo "<a href = \"$_PHP_SELF?page=$next\">Next</a>";
         }
 		else if( $page == 0 ){
+             if ($last==0){}
+             else{
             $page=$page+1;
             echo "<a href = \"$_PHP_SELF?page=$page\">Next</a>";
+           }
          }
            
 }
@@ -77,5 +80,5 @@ function show(){
 		}
 		}
 		
-include('comments.html');
+include('comment.php');
 ?> 
